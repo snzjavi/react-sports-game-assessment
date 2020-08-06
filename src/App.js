@@ -1,24 +1,43 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Game from './components/game/Game';
+
+
 
 function App() {
+
+  const Tropics = {
+    name: 'Flint Tropics',
+    logoSrc: 'assets/FlintTropics.png'
+  }
+
+  const Colonels = {
+    name: 'Kentucky Colonels',
+    logoSrc: 'assets/KentuckyColonelslogo.jpg'
+  }
+
+  const Spirits = {
+    name: 'Spirits of St. Louis',
+    logoSrc: 'assets/spirits.png'
+  }
+
+  const Stars = {
+    name: 'Utah Stars',
+    logoSrc: 'assets/utahStars.png'
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Game
+        venue="Louisville Gardens"
+        homeTeam={Tropics}
+        visitingTeam={Colonels}
+      />
+      <Game
+        venue="The Salt Palace"
+        homeTeam={Spirits}
+        visitingTeam={Stars}
+      />
     </div>
   );
 }
